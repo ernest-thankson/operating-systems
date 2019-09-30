@@ -14,7 +14,13 @@ double calcPolygonArea(int pType, double length){
 	return area;
 }
 
+int detNumTriangles(int numSide){
+	int ans = numSide - 2;
+	return ans;
+}
+
 
 int main(){
-	printf("calcPolygonArea(4, 5.0) = %f", calcPolygonArea(4, 5.0));
+	printf("calcPolygonArea(4, 5.0) = %f\n", calcPolygonArea(4, 5.0));
+	printf("detNumTriangles(4) = %d\n", detNumTriangles(4));
 }
