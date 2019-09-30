@@ -8,7 +8,7 @@
 
 #define PI 3.14159
 
-double calcPolygonArea(int pType, double length){
+double calcPolygonArea(int pType, int length){
 	double numerator = pow(length, 2) * pType;
 	double denominator = 4 * sin(PI/pType)/cos(PI/pType);
 	double area = numerator/denominator;
@@ -23,7 +23,7 @@ int detNumTriangles(int numSide){
 
 int main(int argc, char *argv[]){
 	int numSides = atoi(argv[1]);
-	double length = (double)argv[2];
+	int length = (double)argv[2];
 	if (argc < 3){
 		printf("insufficient arguments supplied\n");
 	}
