@@ -4,7 +4,7 @@
 
 
 
-/*
+
 #define PI 3.14159
 
 double calcPolygonArea(int pType, double length){
@@ -18,18 +18,20 @@ int detNumTriangles(int numSide){
 	int ans = numSide - 2;
 	return ans;
 }
-*/
+
 
 int main(int argc, char *argv[]){
+	int numSides = argv[1];
+	double length = argv[2];
 	if (argc < 3){
-		printf("insufficient arguments supplied");
+		printf("insufficient arguments supplied\n");
 	}
 	if (argc >3){
-		printf("too many arguments provided");
+		printf("too many arguments provided\n");
 	}
 	if (argc == 3){
-		printf("working...");
+		printf("working...\n");
 	}
-	//printf("calcPolygonArea(4, 5.0) = %f\n", calcPolygonArea(4, 5.0));
-	//printf("detNumTriangles(4) = %d\n", detNumTriangles(4));
+	printf("calcPolygonArea(4, 5.0) = %f\n", calcPolygonArea(4, 5.0));
+	printf("detNumTriangles(4) = %d\n", detNumTriangles(4));
 }
