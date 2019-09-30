@@ -28,10 +28,23 @@ int main(int argc, char *argv[]){
 	}
 	if (argc >3){
 		printf("too many arguments provided\n");
-	}
+	} 
 	if (argc == 3){
 		printf("working...\n");
 	}
-	printf("calcPolygonArea(4, 5.0) = %f\n", calcPolygonArea(4, 5.0));
-	printf("detNumTriangles(4) = %d\n", detNumTriangles(4));
+	printf("calcPolygonArea(%d, %f) = %f\n", numSides, length, calcPolygonArea(numSides, length));
+	
+	
+	int childProcess = fork();
+	if(childProcess < 0){
+	 fprintf(stderr, "There was an error creating the new process\n");
+	 exit(1);
+	}else if(childProcess == 0){
+		printf("detNumTriangles(%d) = %d\n", numSides, detNumTriangles(numSides));
+	}
+	
+	return 0;
 }
+
+
+
