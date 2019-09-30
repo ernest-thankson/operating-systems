@@ -23,7 +23,7 @@ int detNumTriangles(int numSide){
 
 int main(int argc, char *argv[]){
 	int numSides = atoi(argv[1]);
-	int length = (double)argv[2];
+	int length = atoi(argv[2]);
 	if (argc < 3){
 		printf("insufficient arguments supplied\n");
 	}
@@ -33,7 +33,7 @@ int main(int argc, char *argv[]){
 	if (argc == 3){
 		printf("working...\n");
 	}
-	printf("calcPolygonArea(%d, %f) = %f\n", numSides, length, calcPolygonArea(numSides, length));
+	printf("calcPolygonArea(%d, %d) = %f\n", numSides, length, calcPolygonArea(numSides, length));
 	
 	
 	int childProcess = fork();
