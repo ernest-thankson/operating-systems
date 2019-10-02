@@ -57,7 +57,7 @@ int main(int argc, char *argv[]){
 	}else{
 		close(pipe_channel[WRITE_END]);
 		read(pipe_channel[READ_END],&read_message,sizeof(read_message));
-		printf("detNumTriangles(%d) = %d\n", *read_message, detNumTriangles(*read_message));
+		printf("detNumTriangles(%d) = %d\n", read_message, detNumTriangles(read_message));
 		close(pipe_channel[READ_END]);
 		
 	}
